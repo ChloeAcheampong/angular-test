@@ -7,19 +7,12 @@
     <title>My first Angular App</title>
   </head>
   <body ng-app="DIApp">
-    <h1>Dependency Injection</h1>
+    <h1>Shopping Cart</h1>
     <div ng-controller="DIController">
-      <input type="text" ng-model="stateOfBeing" >
-      {{stateOfBeing | uppercase}}
-      <button type="button" ng-click="showStateOfBeing();">
-      Change state</button>
-      <div>
-        <br>{{sayMessage()}}
-        <br>{{sayHateMessage()}}
-        <br>Custom : {{sayHateMessage() | truth : "hate": "love" |uppercase}}
-        <img ng-src="/images/{{stateOfBeing}}.jpg" alt="Cat image">
-
-      </div>
+      <input type="text" ng-model="shoppingList[0].quantity" >
+      <ul>
+        <li ng-repeat="item in shoppingList">{{$index +1}}. {{item.quantity}} of {{item.name}}</li>
+      </ul>
     </div>
   </body>
 </html>
