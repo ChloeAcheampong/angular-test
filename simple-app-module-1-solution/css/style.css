@@ -1,0 +1,25 @@
+body{
+  background-image: url("../images/lunch_background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  overflow:hidden;
+}
+
+.lunchChecker{
+  padding: 15%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mainText{
+  text-decoration:   white;
+  padding-bottom: 10%;
+  font-size: 28px;
+  color: #616060;
+}
+
+.checkBtn{
+  background-color: #fed602;
+  padding: 15px;
+  margin-top: 75px;
+}

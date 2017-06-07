@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Lunch Checker</title>
+  </head>
+  <body >
+    <div class="lunchChecker" ng-controller="LunchCheckController">
+      <section class="mainText">
+        What did you have for lunch?
+      </section>
+
+      <input type="text" ng-model="foodItems">
+      <br><br><i>*No empty items are considered</i>
+
+        <br><button type="button" class="checkBtn" ng-click="check();">
+          Check If Too Much</button>
+        <div ng-style="messageStyle">
+          {{message}}
+        </div>
+
+    </div>
+
+  </body>
+</html>
