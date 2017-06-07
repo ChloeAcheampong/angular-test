@@ -8,19 +8,21 @@
     <title>Lunch Checker</title>
   </head>
   <body >
-    <div class="lunchChecker" ng-controller="LunchCheckController">
-      <section class="mainText">
-        What did you have for lunch?
-      </section>
-
-      <input type="text" ng-model="foodItems">
-      <br><br><i>*No empty items are considered</i>
-
+    <div class="container" ng-controller="LunchCheckController">
+      <h1 class="mainText">Lunch Checker </h1>
+      <div class="form-group">
+        <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="foodItems">
+        <br><br><i>*No empty items are considered</i>
+      </div>
+      <div class="">
         <br><button type="button" class="checkBtn" ng-click="check();">
           Check If Too Much</button>
-        <div ng-style="messageStyle">
+      </div>
+      <div class="form-group" ng-style="messageStyle">
           {{message}}
-        </div>
+      </div>
 
     </div>
 

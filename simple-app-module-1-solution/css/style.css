@@ -5,10 +5,13 @@ body{
   overflow:hidden;
 }
 
-.lunchChecker{
-  padding: 15%;
+.container{
+  padding: 10%;
   margin: 0 auto;
   text-align: center;
+}
+#lunch-menu{
+    width: 50%;
 }
 
 .mainText{
@@ -17,7 +20,13 @@ body{
   font-size: 28px;
   color: #616060;
 }
-
+/*.form-group .message{
+  margin-top: 50px;
+  text-align: center;
+  font-size": 50px;
+  border-style: solid;
+  color: red;
+}*/
 .checkBtn{
   background-color: #fed602;
   padding: 15px;
