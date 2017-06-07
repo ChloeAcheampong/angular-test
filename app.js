@@ -9,6 +9,7 @@
   function DIController($scope, hatesFilter ) {
      $scope.stateOfBeing="happy";
      $scope.message="I love you!";
+
      $scope.showStateOfBeing = function () {
        $scope.stateOfBeing = "sad";
      }
@@ -21,6 +22,12 @@
     var msg = hatesFilter($scope.message)
      return msg;
    };
+//never set up watchers like this. Angular has a way of setting up these watchers for us
+  //  $scope.$watch('stateOfBeing', function (newValue,oldvalue ) {
+  //    console.log("Old: "+oldvalue);
+  //    console.log("New: "+newValue);
+   //
+  //  })
 
 
   }
