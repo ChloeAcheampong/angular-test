@@ -8,10 +8,10 @@
     $scope.foodItems = "";
     $scope.message= "";
     $scope.messageStyle= {
-      "width": "70%",
+      "width": "40%",
       "margin": "auto",
       "text-align": "center",
-      "font-size": "50px",
+      "font-size": "40px",
       "border-style": "hidden",
       "color": "red"
     };
