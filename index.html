@@ -9,10 +9,16 @@
   <body ng-app="DIApp">
     <h1>Dependency Injection</h1>
     <div ng-controller="DIController">
+      <input type="text" ng-model="stateOfBeing" >
+      {{stateOfBeing | uppercase}}
       <button type="button" ng-click="showStateOfBeing();">
       Change state</button>
       <div>
+        <br>{{sayMessage()}}
+        <br>{{sayHateMessage()}}
+        <br>Custom : {{sayHateMessage() | truth : "hate": "love" |uppercase}}
         <img ng-src="/images/{{stateOfBeing}}.jpg" alt="Cat image">
+
       </div>
     </div>
   </body>
