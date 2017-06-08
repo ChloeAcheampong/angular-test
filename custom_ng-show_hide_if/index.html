@@ -22,10 +22,17 @@
            </li>
         </ol>
         <br>
-        Error: {{list1.errorMessage}}
+        <div ng-show="list1.errorMessage"class="error">
+          Error: {{list1.errorMessage}}
+        </div>
+        <!-- <div ng-hide="!list1.errorMessage"class="error">
+          Error: {{list1.errorMessage}}
+        </div> -->
+        <!-- <div ng-if="list1.errorMessage"class="error">
+          Error: {{list1.errorMessage}}
+        </div> -->
+
     </div>
-
-
 
 
   </body>
