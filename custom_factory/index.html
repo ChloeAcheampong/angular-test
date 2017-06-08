@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Filter Example</title>
+  </head>
+  <body ng-app="ServicesFactoryExample">
+    <h1>Services using Factories example</h1>
+
+    <div class="container" ng-controller="List1Controller as list1">
+        <h2>Shopping Cart #1 </h2>
+        <input type="text" ng-model="list1.itemName" placeholder="item name">
+        <input type="text" ng-model="list1.itemQuantity" placeholder="item quantity">
+        <button type="button" name="button" ng-click="list1.addItem();" > Add item</button>
+
+        <ol>
+          <li ng-repeat="item in list1.items"> {{item.itemQuantity}}
+             of {{item.itemName}}
+             <button type="button" name="button"  ng-click="list1.removeItem($index);">Remove</button>
+           </li>
+        </ol>
+        <br>
+        Error: {{list1.errorMessage}}
+    </div>
+
+    <div class="container" ng-controller="List2Controller as list2">
+      <h2>Shopping Cart #2 </h2>
+        <input type="text" ng-model="list2.itemName" placeholder="item name">
+        <input type="text" ng-model="list2.itemQuantity" placeholder="item quantity">
+        <button type="button" name="button" ng-click="list2.addItem();" > Add item</button>
+
+        <ol>
+          <li ng-repeat="item in list2.items"> {{item.itemQuantity}}
+             of {{item.itemName}}
+             <button type="button" name="button"  ng-click="list2.removeItem($index);">Remove</button>
+           </li>
+        </ol>
+        Error: {{list2.errorMessage}}
+    </div>
+
+
+
+  </body>
+</html>
