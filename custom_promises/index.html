@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Promise Example</title>
+  </head>
+  <body ng-app="PromiseExample">
+    <h1>Check content using promises</h1>
+
+    <div class="container" ng-controller="PromiseController as list1">
+        <h2>Shopping Cart #1 </h2>
+        <input type="text" ng-model="list1.itemName" placeholder="item name">
+        <input type="text" ng-model="list1.itemQuantity" placeholder="item quantity">
+        <button type="button" name="button" ng-click="list1.addItem();" > Add item</button>
+
+        <ol>
+          <li ng-repeat="item in list1.items"> {{item.itemQuantity}}
+             of {{item.itemName}}
+             <button type="button" name="button"  ng-click="list1.removeItem($index);">Remove</button>
+           </li>
+        </ol>
+        <br>
+        <div ng-if="list1.errorMessage"class="error">
+          Error: {{list1.errorMessage}}
+        </div>
+
+    </div>
+
+
+  </body>
+</html>
