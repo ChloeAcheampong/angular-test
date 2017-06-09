@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Filter Example</title>
+  </head>
+  <body ng-app="CustomDirectivesExample">
+    <h1>Template Directives example</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container" ng-controller="List1Controller as list">
+            <input type="text" ng-model="list.itemName" placeholder="item name">
+            <input type="text" ng-model="list.itemQuantity" placeholder="item quantity">
+            <button type="button" name="button" ng-click="list.addItem();" > Add item</button>
+
+            <!-- <ol> This does not allow us to pass parameters to the directive.
+              <list-item  ng-repeat="item in list.items"></list-item><!- Using directive as Element -->
+              <!-- <li list-item ng-repeat="item in list.items"></li>  Using list-item as an Attribute-->
+            <!-- </ol>  -->
+            <shopping-list my-list="list" title="{{list.title}}"></shopping-list>
+            <br>
+            Error: {{list.errorMessage}}
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="container" ng-controller="List2Controller as list2">
+          
+            <input type="text" ng-model="list2.itemName" placeholder="item name">
+            <input type="text" ng-model="list2.itemQuantity" placeholder="item quantity">
+            <button type="button" name="button" ng-click="list2.addItem();" > Add item</button>
+
+            <!-- <ol>This does not allow us to pass parameters to the directive.
+              <list-item  ng-repeat="item in list.items"></list-item> <! Using directive as Element -->
+                <!-- <li list-item ng-repeat="item in list.items"></li>  Using list-item as an Attribute-->
+            <!-- </ol> -->
+
+            <shopping-list my-list="list2" title="Shopping Cart #2 (3 items max)"></shopping-list>
+            <br>
+            Error: {{list2.errorMessage}}
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
